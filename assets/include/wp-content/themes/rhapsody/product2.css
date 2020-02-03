@@ -1,0 +1,577 @@
+/*!
+ * Start Bootstrap - Busines Frontpage (https://startbootstrap.com/template-overviews/business-frontpage)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+ 
+  
+  /* card */
+  .dress-card img{
+      height:220px;
+  }
+  .dress-card-img-top {
+    width:100%;
+    border-radius: 7px 7px 0 0;
+  }
+  
+  .dress-card-body {
+    padding:1rem;
+    background: #fff;
+    border-radius: 0 0 7px 7px;
+  }
+  
+  .dress-card-title {
+    line-height: 0.5rem;
+  }
+  
+  .dress-card-crossed {
+    text-decoration: line-through;
+  }
+  
+  .dress-card-price {
+    font-size: 15px;
+    font-weight: bold;
+    color:black;
+  }
+  
+  .dress-card-off {
+    color: #E06C9F;
+  }
+  
+  .dress-card-para {
+    margin-bottom: 0.2rem;
+    font-size: 1.0rem;
+    margin-bottom: 0rem;
+  }
+  
+  .dress-card {
+    border-radius: 14px;
+    padding:26px;
+  }
+  
+  .dress-card-heart {
+    font-size: 1em;
+    color: #DB2763;
+    margin: 4.5px;
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    
+  }
+  .dress-card-para{
+    font-size:15px !important;
+    color:black !important;
+  }
+  
+  .surprise-bubble {
+    display:none;
+    position: absolute;
+    bottom: 12rem;
+    right: 2rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    padding: 1rem;
+    color: white;
+    -webkit-transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  .surprise-bubble a {
+    font-size: 0.65em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    font-family: arial;
+    text-decoration: none;
+    position: absolute;
+    top: 9px;
+    left: 20px;
+    opacity: 0;
+    -webkit-transition-delay: 2s;
+    /* Safari */
+    transition-delay: 2s;
+    -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  .surprise-bubble:hover {
+    border-radius: 999rem;
+    padding: 1rem;
+    width: 26%;
+    height: 30px;
+    background: #DB2763;
+    color: white;
+    -webkit-transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  .surprise-bubble:hover a {
+    opacity: 1;
+    -webkit-transition-delay: 2s;
+    /* Safari */
+    transition-delay: 2s;
+    -webkit-transition: opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: opacity 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  .card-button {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 9px;
+  }
+  .card-button a {
+    text-decoration: none;
+  }
+  
+  .card-button-inner {
+    padding: 10px;
+    border-radius: 3px;
+  }
+  
+  .bag-button {
+    background: #56bacd;
+    color: white;
+  }
+  
+  .bag-button :hover{
+    background: #e299b9;
+  }
+  
+  .wish-button {
+    border: 1px solid #56bacd;
+    color: #56bacd;
+  }
+  
+  /* checkbox */
+  /* This css is for normalizing styles. You can skip this. */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.new {
+  padding: 8px;
+}
+
+.form-group {
+  display: block;
+  margin-bottom: 0px !important;
+}
+
+.form-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.form-group label {
+  position: relative;
+  cursor: pointer;
+  font-size:15.5px;
+}
+
+.form-group label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 6px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius:3px;
+}
+
+
+.form-group input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 5px;
+  height: 11px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* cart start */
+
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'Shopper';
+    src: url('http://www.shopperfont.com/font/Shopper-Std.ttf');
+}
+
+.shopper {
+  text-transform: lowercase;
+  font: 2em 'Shopper', sans-serif;
+  line-height: 0.5em;
+  display: inline-block;
+}
+
+
+
+.my_cart h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.5em;
+  color:#3c3c3c !important;
+}
+
+.my_cart p {
+  font-size: 1.5em;
+  color: gray !important;
+}
+
+.my_cart input {
+  border: 0.3em solid #bbc3c6;
+  padding: 0.5em 0.3em; 
+  font-size: 1.4em;
+  color: #8a8a8a;
+  text-align: center;
+}
+
+.my_cart img {
+  max-width: 9em;
+  width: 100%;
+  overflow: hidden; 
+  margin-right: 1em;
+}
+
+.my_cart a {
+  text-decoration: none;
+}
+
+.my_cart {
+  max-width: 75em;
+  width: 100%;
+  margin: 40px auto;  
+  overflow: hidden;
+  position: relative;
+  
+  border-radius: 0.6em;
+  background: #ecf0f1;
+  box-shadow: 0 0.5em 0 rgba(138, 148, 152, 0.2);
+}
+
+.heading {
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+  color: #f7f7f7;
+  background: #dadadc;
+}
+
+.cart {
+  margin: 2.5em;
+  overflow: hidden;
+}
+
+.cart.is-closed {
+  height: 0;
+  margin-top: -2.5em;
+}
+
+.table {
+  background: #ffffff;
+  border-radius: 0.6em;
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 1.8em;
+}
+
+
+.layout-inline > * {
+  display: inline-block;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.th {
+  background: #dadadc;
+  color: #3c3c3c;
+  text-transform: uppercase;
+  font-weight:bolder;
+  font-size: 1.5em;
+}
+
+.tf {
+  background: #dadadc;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 1.2em;  
+}
+
+.tf p {
+  color: #3c3c3c !important;
+  font-weight:600;
+}
+
+.col {
+  padding: 1em;
+  width: 12%;
+}
+
+.col-pro {
+  width: 44%;
+}
+
+.col-pro > * {
+  vertical-align: middle;
+}
+
+.col-qty {
+  text-align: center;
+  width: 17%;
+}
+
+.col-numeric p {
+  
+}
+
+.col-total p {
+  color: #12c8b1;
+}
+
+.tf .col {
+  width: 20%;
+}
+
+.row > div {
+  vertical-align: middle;
+}
+
+.row-bg2 {
+  background: #f7f7f7;
+}
+
+.visibility-cart {
+  position: absolute;
+  color: #fff;
+  top: 0.5em;
+  right: 0.5em;
+  font:  bold 2em arial;
+  border: 0.16em solid #fff;
+  border-radius: 2.5em;
+  padding: 0 0.22em 0 0.25em ;
+}
+
+.col-qty > * {
+  vertical-align: middle; 
+}
+
+.col-qty > input {
+  max-width: 2.6em;
+}
+
+
+a.qty {
+  width: 1em;
+  line-height: 1em;
+  border-radius: 2em;
+  font-size: 2.5em;
+  
+  text-align: center;
+  background: #43ace3;  
+  color: #fff;
+}
+
+a.qty:hover {
+  background: #3b9ac6;
+}
+
+.btn {
+  padding: 10px 30px;
+  border-radius: 0.3em;
+  font-size: 1.4em;
+ 
+  background: #43ace3;
+  color: #fff;
+  box-shadow: 0 3px 0 rgba(59,154,198, 1)
+}
+
+.btn:hover {
+  box-shadow: 0 3px 0 rgba(59,154,198, 0)
+}
+
+.btn-update {
+  float: right;
+  margin: 0 0 1.5em 0;
+}
+
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and ( max-width: 755px) {
+  .my_cart {
+    width: 98%;
+  }
+  
+  .col-pro {
+    width: 35%;
+  }
+  
+  .col-qty {
+    width: 22%;
+  }
+  
+  .my_cart img {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and ( max-width: 591px) {
+  
+}
+/*end of cart */
+
+/* check */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+
+
+@media (min-width: 1200px)
+{
+  
+}
+.d-flex{
+  display: flex;
+  flex-direction: row;
+  background: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+  padding: 25px;
+}
+form{
+  flex: 4;
+}
+.Yorder{
+  flex: 2;
+}
+.title{
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195A8), color-stop(100, #70EAFF));
+  background: -moz-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: -ms-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: -o-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: linear-gradient(to bottom right, #5195A8 0%, #70EAFF 100%);
+  border-radius:5px 5px 0 0 ;
+  padding: 20px;
+  color: #f6f6f6;
+}
+.check h2{
+  margin: 0;
+  padding-left: 15px; 
+}
+.required{
+  color: red;
+}
+label, table{
+  display: block;
+  margin: 15px;
+}
+label>span{
+  float: left;
+  width: 45%;
+  margin-top: 12px;
+  padding-right: 10px;
+}
+input[type="text"], input[type="tel"], input[type="email"], select
+{
+  width: 100%;
+  height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #dadada;
+  color: #888;
+}
+select{
+  width: 72%;
+  height: 45px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.Yorder{
+  margin-top: 15px;
+  height: 600px;
+  padding: 20px;
+  border: 1px solid #dadada;
+}
+table{
+  margin: 0;
+  padding: 0;
+}
+th{
+  border-bottom: 1px solid #dadada;
+  padding: 10px 0;
+}
+tr>td:nth-child(1){
+  text-align: left;
+  color: #2d2d2a;
+}
+tr>td:nth-child(2){
+  text-align: right;
+  color: #52ad9c;
+}
+td{
+  border-bottom: 1px solid #dadada;
+  padding: 25px 25px 25px 0;
+}
+
+p{
+  display: block;
+  color: #888;
+  margin: 0;
+  padding-left: 25px;
+}
+.Yorder>div{
+  padding: 15px 0; 
+}
+
+button{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: #52ad9c;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+button:hover{
+  cursor: pointer;
+  background: #428a7d;
+}
+
+.search_icon {
+  position: absolute;
+  top: 28px !important;
+  left: 131px;
+}
